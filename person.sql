@@ -17,38 +17,67 @@ VALUES ('Trew', 1000, 2000, 'Oakland', 'Tea'),
 ('Logan', 1000, 9000, 'Lafayette', 'Keyboard');
 
 -- Select all the people in the person table by height from tallest to shortest.
-SELECT height FROM person ORDER BY height DESC;
+SELECT name 
+FROM person 
+ORDER BY height DESC;
 
 -- Select all the people in the person table by height from shortest to tallest.
-SELECT height FROM person ORDER BY height ASC;
+SELECT name 
+FROM person 
+ORDER BY height 
+ASC;
 
 -- Select all the people in the person table by age from oldest to youngest.
-SELECT age FROM person ORDER BY age DESC;SELECT age FROM person ORDER BY age DESC;
+SELECT name 
+FROM person 
+ORDER BY age 
+DESC;
 
 -- Select all the people in the person table older than age 20.
-SELECT age FROM person WHERE age > 20;
+SELECT name 
+FROM person 
+WHERE age > 20;
 
 -- Select all the people in the person table that are exactly 18.
-SELECT age FROM person WHERE age = 18;
+SELECT name 
+FROM person 
+WHERE age = 18;
 
 -- Select all the people in the person table that are less than 20 and older than 30.
-
+SELECT name 
+FROM person 
+WHERE age < 20 OR age > 30;
 
 -- Select all the people in the person table that are not 27 (use not equals).
-
+SELECT name 
+FROM person 
+WHERE age != 27;
 
 -- Select all the people in the person table where their favorite color is not red.
-
+SELECT name 
+FROM person 
+WHERE favorite_color != 'red';
 
 -- Select all the people in the person table where their favorite color is not red and is not blue.
-
+SELECT name 
+FROM person 
+WHERE favorite_color != 'red' 
+AND favorite_color != 'blue';
 
 -- Select all the people in the person table where their favorite color is orange or green.
-
+SELECT name 
+FROM person 
+WHERE favorite_color = 'orange'
+OR favorite_color = 'green';
 
 -- Select all the people in the person table where their favorite color is orange, green or blue (use IN).
-
+SELECT name 
+FROM person 
+WHERE favorite_color 
+IN ('orange','green','blue');
 
 -- Select all the people in the person table where their favorite color is yellow or purple (use IN).
-
-
+SELECT name 
+FROM person 
+WHERE favorite_color 
+IN ('yellow','purp');
